@@ -48,9 +48,10 @@ const PostCard = ({ post }: { post: PostTypeCard }) => {
 
       <Link href={`/post/${_id}`}>
         <p className="startup-card_desc">{excerpt}</p>
-        <Image
-          src="https://placehold.co/48x48"
-          alt="placeholder"
+
+        <img
+          src={image}
+          alt={title}
           width={400}
           height={200}
           className="rounded-lg mt-5 cursor-pointer"
