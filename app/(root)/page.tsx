@@ -1,8 +1,8 @@
 import Image from "next/image";
 import SearchForm from "@/components/SearchForm";
 import PostCard, { PostTypeCard } from "@/components/PostCard";
-import { client } from "@/sanity/lib/client";
 import { POSTS_QUERY } from "@/sanity/lib/queries";
+import { sanityFetch, SanityLive } from "@/sanity/lib/live";
 
 export default async function Home({
   searchParams,
@@ -10,52 +10,15 @@ export default async function Home({
   searchParams: Promise<{ query?: string }>;
 }) {
   const query = (await searchParams).query;
+  const params = { search: query || null };
 
-  const posts = await client.fetch(POSTS_QUERY);
-
-  console.log(JSON.stringify(posts, null, 2));
-
-  // const posts = [
-  //   {
-  //     _createdAt: new Date(),
-  //     _id: 1,
-  //     views: 40,
-  //     author: { _id: 1, name: "John Doe" },
-  //     image: "/post-one.avif",
-  //     excerpt:
-  //       "Learn how to build a blog with Next.js, the React framework that provides a great developer experience with a powerful feature set.",
-  //     category: "React",
-  //     title: "How to build a blog with Next.js",
-  //   },
-  //   {
-  //     _createdAt: new Date(),
-  //     _id: 2,
-  //     views: 23,
-  //     author: { _id: 2, name: "Jackson Ben" },
-  //     image: "/post-two.avif",
-  //     excerpt:
-  //       "Learn how to setup your node server with Express.js, the most popular Node.js framework.",
-  //     category: "Node.js",
-  //     title: "How to setup your node server",
-  //   },
-  //   {
-  //     _createdAt: new Date(),
-  //     _id: 3,
-  //     views: 100,
-  //     author: { _id: 3, name: "Stephen Smith" },
-  //     image: "/post-three.avif",
-  //     excerpt:
-  //       "Learn how to build an e-commerce site with Next.js, the React framework that provides a great developer experience with a powerful feature set.",
-  //     category: "Next.js",
-  //     title: "How to build an e-commerce site with Next.js",
-  //   },
-  // ];
+  const { data: posts } = await sanityFetch({ query: POSTS_QUERY, params });
 
   return (
     <>
       {/* Hero Section */}
       <section
-        className="relative w-full h-screen bg-cover bg-center flex items-center justify-center text-center px-6"
+        className="relative w-full h-screen bg-cover bg-center flex items-center justify-center text-center mt-10 md:mt-4 px-6"
         style={{
           backgroundImage: "url('/hero-bg.avif')",
         }}
@@ -100,6 +63,8 @@ export default async function Home({
           )}
         </ul>
       </section>
+
+      <SanityLive />
     </>
   );
 }

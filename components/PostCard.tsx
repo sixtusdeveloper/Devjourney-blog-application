@@ -37,18 +37,17 @@ const PostCard = ({ post }: { post: PostTypeCard }) => {
 
         <Link href={`/user/${author?._id}`}>
           <Image
-            src="https://placehold.co/48x48"
-            alt="placeholder"
+            src={author?.image || "/avatar.png"}
+            alt="author avatar"
             width={48}
             height={48}
-            className="rounded-full cursor-pointer"
+            className="card-avatar rounded-full cursor-pointer object-cover border-1 border-gray-200"
           />
         </Link>
       </div>
 
       <Link href={`/post/${_id}`}>
         <p className="startup-card_desc">{excerpt}</p>
-
         <img
           src={image}
           alt={title}
