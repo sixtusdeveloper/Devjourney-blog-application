@@ -3,6 +3,8 @@ import SearchForm from "@/components/SearchForm";
 import PostCard, { PostTypeCard } from "@/components/PostCard";
 import { POSTS_QUERY } from "@/sanity/lib/queries";
 import { sanityFetch, SanityLive } from "@/sanity/lib/live";
+import { auth } from "@/auth";
+import Link from "next/link";
 
 export default async function Home({
   searchParams,
@@ -12,13 +14,16 @@ export default async function Home({
   const query = (await searchParams).query;
   const params = { search: query || null };
 
+  const session = await auth();
+  console.log(session?.id);
+
   const { data: posts } = await sanityFetch({ query: POSTS_QUERY, params });
 
   return (
     <>
       {/* Hero Section */}
       <section
-        className="relative w-full h-screen bg-cover bg-center flex items-center justify-center text-center mt-10 md:mt-4 px-6"
+        className="relative w-full min-h-screen lg:min-h-[430px] bg-cover bg-center flex items-center justify-center text-center md:mt-12 mt-10 md:py-8 px-6"
         style={{
           backgroundImage: "url('/hero-bg.avif')",
         }}
@@ -36,9 +41,11 @@ export default async function Home({
             connections, and groundbreaking collaborations. Share your stories,
             ideas, and expertise with a vibrant community of innovators.
           </p>
-          <button className="mx-auto mt-4 px-6 py-3 bg-gradient-to-r from-indigo-600 via-green-500 to-purple-600 text-white flex items-center cursor-pointer tracking-wide text-lg font-semibold rounded-md shadow-lg transition duration-300">
-            Get Started
-          </button>
+          <Link href="/post/create">
+            <button className="mx-auto mt-4 px-6 py-3 bg-gradient-to-r from-indigo-600 via-green-500 to-purple-600 text-white flex items-center cursor-pointer tracking-wide text-lg font-semibold rounded-md shadow-lg transition duration-300">
+              Get Started
+            </button>
+          </Link>
         </div>
       </section>
 

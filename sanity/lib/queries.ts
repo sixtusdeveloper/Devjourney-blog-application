@@ -17,3 +17,13 @@ export const POST_BY_ID_QUERY = defineQuery(`
     _id, name, username, image, bio
   }
 }`);
+
+export const POST_VIEWS_QUERY = defineQuery(`
+  *[_type == "devpost" && _id == $id][0]{
+  _id, views
+}`);
+
+export const AUTHOR_BY_GITHUB_ID_QUERY = defineQuery(`
+  *[_type == "author" && id == $id][0]{
+  _id, id, name, username, email, image, bio
+}`);
