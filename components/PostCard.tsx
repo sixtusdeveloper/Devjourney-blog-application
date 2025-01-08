@@ -1,8 +1,9 @@
-import { formatDate } from "@/lib/utils";
+import { cn, formatDate } from "@/lib/utils";
 import { EyeIcon } from "lucide-react";
 import Link from "next/link";
 import { Devpost, Author } from "@/sanity/types";
 import Image from "next/image";
+import { Skeleton } from "@/components/ui/skeleton";
 
 export type PostTypeCard = Omit<Devpost, "author"> & { author?: Author };
 
@@ -37,7 +38,7 @@ const PostCard = ({ post }: { post: PostTypeCard }) => {
 
         <Link href={`/user/${author?._id}`}>
           <Image
-            src={author?.image || "/avatar.png"}
+            src={author?.image?.trim() || "/avatar.png"}
             alt="author avatar"
             width={48}
             height={48}
@@ -49,7 +50,7 @@ const PostCard = ({ post }: { post: PostTypeCard }) => {
       <Link href={`/post/${_id}`}>
         <p className="startup-card_desc">{excerpt}</p>
         <Image
-          src={image || "/default-img.webp"}
+          src={image?.trim() || "/default-img.webp"}
           alt={title || "Post image"}
           width={400}
           height={200}
@@ -75,6 +76,16 @@ const PostCard = ({ post }: { post: PostTypeCard }) => {
       </div>
     </li>
   );
+};
+
+export const PostCardSkeleton = () => {
+  <>
+    {[1, 2, 3, 4].map((i) => (
+      <li key={cn("skeleton", i)}>
+        <Skeleton className="post-card_skeleton" />
+      </li>
+    ))}
+  </>;
 };
 
 export default PostCard;

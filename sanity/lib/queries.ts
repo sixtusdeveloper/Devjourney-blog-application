@@ -16,7 +16,6 @@ export const POSTS_QUERY = defineQuery(`
       author -> {
         _id, 
         name, 
-        slug, 
         image, 
         bio
       }
@@ -88,6 +87,42 @@ export const AUTHOR_BY_GITHUB_ID_QUERY = defineQuery(`
     bio
   }
 `);
+
+
+export const AUTHOR_BY_ID_QUERY = defineQuery(`
+  *[_type == "author" && _id == $id][0]{
+    _id, 
+    id, 
+    name, 
+    username, 
+    email, 
+    image, 
+    bio
+  }
+`);
+
+export const POSTS_BY_AUTHOR_QUERY = defineQuery(`
+  *[_type == "devpost" && author._ref == $id] 
+  | order(_createdAt desc){
+    _id, 
+    title, 
+    _createdAt, 
+    slug,
+    image, 
+    views, 
+    excerpt, 
+    category, 
+    author -> {
+      _id, 
+      name,
+      image, 
+      bio
+    }
+  }
+`);
+
+
+
 
 
 

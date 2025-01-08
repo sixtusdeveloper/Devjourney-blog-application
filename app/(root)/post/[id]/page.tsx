@@ -36,7 +36,7 @@ const page = async ({ params }: { params: Promise<{ id: string }> }) => {
         <div className="absolute inset-0 bg-black/60"></div>
 
         {/* Content */}
-        <div className="relative z-10 text-white text-center px-4 space-y-6 max-w-3xl">
+        <div className="relative z-10 text-white text-center py-8 px-4 space-y-6 max-w-3xl">
           <p className="inline-block bg-white/10 text-sm font-medium px-4 py-2 rounded-full shadow-md hover:shadow-lg transition-all">
             {formatDate(post?._createdAt)}
           </p>

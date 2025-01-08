@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { auth, signOut, signIn } from "@/auth";
+import { BadgePlus, LogOut } from "lucide-react";
+import { AvatarImage, Avatar } from "@/components/ui/avatar";
 
 // Define server action functions outside the component
 const handleSignOut = async () => {
@@ -29,17 +31,24 @@ const Navbar = async () => {
           {session && session?.user ? (
             <>
               <Link href="/post/create">
-                <span>Create</span>
+                <span className="max-sm:hidden">Create</span>
+                <BadgePlus className="size-6 sm:hidden text-blue-500" />
               </Link>
 
               <form action={handleSignOut}>
                 <button type="submit" className="hover:text-red-600">
-                  Logout
+                  <span className="max-sm:hidden">Logout</span>
+                  <LogOut className="size-6 sm:hidden text-red-500" />
                 </button>
               </form>
 
               <Link href={`/user/${session?.user?.id}`}>
-                <span>{session?.user?.name}</span>
+                <Avatar className="size-10">
+                  <AvatarImage
+                    src={session?.user?.image || "/avatar.jpg"}
+                    alt={session?.user?.name || "User Avatar"}
+                  />
+                </Avatar>
               </Link>
             </>
           ) : (

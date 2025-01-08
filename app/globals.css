@@ -16,7 +16,7 @@
   }
 
   .text-30-extrabold {
-    @apply text-[30px] font-extrabold text-white;
+    @apply text-[20px] font-extrabold text-white;
   }
 
   .text-30-bold {
@@ -85,11 +85,11 @@
   }
 
   .profile_card {
-    @apply w-80 px-6 pb-6 pt-20 flex flex-col justify-center items-center bg-primary border-[5px] border-black shadow-100 rounded-[30px] relative z-0 h-fit max-lg:w-full;
+    @apply w-96 px-6 pb-6 pt-20 flex flex-col justify-center items-center bg-gradient-to-r from-blue-400 via-indigo-600 to-purple-600 border-[5px] border-blue-400 shadow-zinc-100 rounded-[30px] relative z-0 h-fit max-lg:w-full;
   }
 
   .profile_title {
-    @apply w-11/12 bg-white border-[5px] border-black rounded-[20px] px-5 py-3 absolute -top-9 after:absolute after:content-[''] after:-top-1 after:right-0 after:-skew-y-6 after:bg-black after:-z-[1] after:rounded-[20px] after:w-full after:h-[60px] before:absolute before:content-[''] before:-bottom-1 before:left-0  before:-skew-y-6 before:w-full before:h-[60px] before:bg-black  before:-z-[1] before:rounded-[20px] shadow-100;
+    @apply w-11/12 bg-blue-200 border-[5px] border-blue-400 rounded-[20px] px-5 py-3 absolute -top-9 after:absolute after:content-[''] after:-top-1 after:right-0 after:-skew-y-6 after:bg-blue-400 after:-z-[1] after:rounded-[20px] after:w-full after:h-[60px] before:absolute before:content-[''] before:-bottom-1 before:left-0  before:-skew-y-6 before:w-full before:h-[60px] before:bg-blue-400  before:-z-[1] before:rounded-[20px] shadow-blue-200;
   }
 
   .profile_image {
@@ -152,7 +152,7 @@
     @apply rounded-full bg-black-200 font-medium text-[16px] text-white px-5 py-3 !important;
   }
 
-  .startup-card_skeleton {
+  .post-card_skeleton {
     @apply w-full h-96 rounded-[22px] bg-zinc-400;
   }
 
@@ -251,4 +251,11 @@
 .pagination button.inactive {
   background-color: #e5e7eb;
   color: black;
+}
+
+.user_profile_image {
+  width: 130px !important;
+  height: 130px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
 }
