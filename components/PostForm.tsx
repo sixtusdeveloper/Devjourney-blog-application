@@ -9,6 +9,7 @@ import { formSchema } from "@/lib/validation";
 import { z } from "zod";
 import { useToast } from "@/hooks/use-toast";
 import { useRouter } from "next/navigation";
+import { createPitch } from "@/lib/actions";
 
 const PostForm = () => {
   const [errors, setErrors] = useState<Record<string, string>>({});
@@ -29,18 +30,17 @@ const PostForm = () => {
       await formSchema.parseAsync(formValues);
       console.log(formValues);
 
-      // const result = await createIdea(prevState, formValues, pitch);
-      // console.log(result);
+      const result = await createPitch(prevState, formData, pitch);
 
-      //   if (result.status === "SUCCESS") {
-      //     toast({
-      //       title: "SUCCESS",
-      //       description: "Your post has been created successfully!",
-      //     });
-      //     router.push(`/post/${result._id}`);
-      //   }
+      if (result.status === "SUCCESS") {
+        toast({
+          title: "SUCCESS",
+          description: "Your post has been created successfully!",
+        });
+        router.push(`/post/${result._id}`);
+      }
 
-      //   return result;
+      return result;
     } catch (error) {
       if (error instanceof z.ZodError) {
         const fieldErrors = error.flatten().fieldErrors;
