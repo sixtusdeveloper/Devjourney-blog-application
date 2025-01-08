@@ -233,3 +233,22 @@
   border-radius: 50%;
   object-fit: cover;
 }
+
+.post-img {
+  width: 400px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.pagination button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+}
+.pagination button.active {
+  background-color: #3b82f6;
+  color: white;
+}
+.pagination button.inactive {
+  background-color: #e5e7eb;
+  color: black;
+}

@@ -48,12 +48,12 @@ const PostCard = ({ post }: { post: PostTypeCard }) => {
 
       <Link href={`/post/${_id}`}>
         <p className="startup-card_desc">{excerpt}</p>
-        <img
-          src={image}
-          alt={title}
+        <Image
+          src={image || "/default-img.webp"}
+          alt={title || "Post image"}
           width={400}
           height={200}
-          className="rounded-lg mt-5 cursor-pointer"
+          className="post-img rounded-lg mt-5 cursor-pointer"
         />
       </Link>
 

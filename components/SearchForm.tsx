@@ -12,7 +12,7 @@ const SearchForm = ({ query }: { query?: string }) => {
       <Form
         action="/"
         scroll={false}
-        className="flex items-center max-w-3xl relative mx-auto justify-center ring-1 rounded-lg searchform"
+        className="flex items-center max-w-2xl relative mx-auto justify-center ring-1 rounded-lg searchform"
       >
         <input
           name="query"
