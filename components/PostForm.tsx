@@ -16,6 +16,7 @@ const PostForm = () => {
   const [pitch, setPitch] = useState("");
 
   const { toast } = useToast();
+
   const router = useRouter();
 
   const handleFormSubmit = async (prevState: any, formData: FormData) => {
@@ -33,10 +34,12 @@ const PostForm = () => {
       const result = await createPitch(prevState, formData, pitch);
 
       if (result.status === "SUCCESS") {
+        // Toast success message
         toast({
           title: "SUCCESS",
           description: "Your post has been created successfully!",
         });
+
         router.push(`/post/${result._id}`);
       }
 
@@ -78,7 +81,10 @@ const PostForm = () => {
   });
 
   return (
-    <form action={formAction} className="startup-form flex flex-col space-y-4">
+    <form
+      action={formAction}
+      className="post-form border rounded-lg border-gray-200 flex flex-col space-y-4"
+    >
       <div>
         <label
           htmlFor="title"

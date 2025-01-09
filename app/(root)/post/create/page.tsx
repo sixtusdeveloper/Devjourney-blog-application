@@ -37,7 +37,13 @@ const page = async () => {
         </div>
       </section>
 
-      <PostForm />
+      <section className="container mx-auto px-4 md:px-0">
+        <h2 className="text-3xl text-gray-700 font-bold text-center mt-10">
+          Create a New Post
+        </h2>
+
+        <PostForm />
+      </section>
     </>
   );
 };

@@ -10,6 +10,7 @@ export type PostTypeCard = Omit<Devpost, "author"> & { author?: Author };
 const PostCard = ({ post }: { post: PostTypeCard }) => {
   const { _id, _createdAt, views, image, author, excerpt, category, title } =
     post;
+
   return (
     <li className="devpost-card group">
       <div className="flex-between">

@@ -67,7 +67,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={workSans.variable}>
+      <body className={`${workSans.variable} bg-slate-100 text-slate-800`}>
         {children}
         <Toaster />
       </body>

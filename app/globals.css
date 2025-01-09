@@ -157,8 +157,8 @@
   }
 
   /* startupform */
-  .startup-form {
-    @apply max-w-2xl mx-auto bg-white my-10 space-y-8 px-6;
+  .post-form {
+    @apply max-w-2xl mx-auto bg-slate-100 my-10 space-y-8 px-3 md:px-6 py-8;
   }
 
   .startup-form_label {

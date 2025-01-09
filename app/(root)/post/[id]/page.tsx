@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 import { client } from "@/sanity/lib/client";
-import { POST_BY_ID_QUERY } from "@/sanity/lib/queries";
+import { PLAYLIST_BY_SLUG_QUERY, POST_BY_ID_QUERY } from "@/sanity/lib/queries";
 import { notFound } from "next/navigation";
 import { formatDate } from "@/lib/utils";
 import Link from "next/link";
@@ -8,6 +8,7 @@ import Image from "next/image";
 import markdownit from "markdown-it";
 import { Skeleton } from "@/components/ui/skeleton";
 import View from "@/components/View";
+import PostCard, { PostTypeCard } from "@/components/PostCard";
 
 export const experimental_ppr = true;
 const md = markdownit();
@@ -21,7 +22,11 @@ const truncateText = (text: string, limit: number): string => {
 const page = async ({ params }: { params: Promise<{ id: string }> }) => {
   const id = (await params).id;
 
-  const post = await client.fetch(POST_BY_ID_QUERY, { id });
+  const [post, { select: editorPosts }] = await Promise.all([
+    client.fetch(POST_BY_ID_QUERY, { id }),
+    client.fetch(PLAYLIST_BY_SLUG_QUERY, { slug: "editor-picks" }),
+  ]);
+
   if (!post) return notFound();
 
   const parsedContent = md.render(post?.pitch || "");
@@ -49,7 +54,7 @@ const page = async ({ params }: { params: Promise<{ id: string }> }) => {
             {/* Truncate excerpt to 120 characters */}
           </p>
 
-          <Link href="/post/create">
+          <Link href="/post/create" className="text-center">
             <button className="mt-6 px-6 py-3 mx-auto bg-gradient-to-r from-green-600 via-indigo-500 to-purple-700 hover:scale-95 text-white flex items-center cursor-pointer tracking-wide text-lg font-semibold rounded-full shadow-lg transition duration-300">
               Share Your Thoughts
             </button>
@@ -98,6 +103,18 @@ const page = async ({ params }: { params: Promise<{ id: string }> }) => {
         </div>
 
         <hr className="divider my-4" />
+
+        {editorPosts?.length > 0 && (
+          <div className="space-y-5 mt-8 max-w-6xl md:px-4 mx-auto">
+            <p className="text-30-semibold">Editor Picks</p>
+
+            <ul className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+              {editorPosts.map((post: PostTypeCard, i: number) => (
+                <PostCard key={i} post={post} />
+              ))}
+            </ul>
+          </div>
+        )}
 
         <Suspense fallback={<Skeleton className="view_skeleton" />}>
           <View id={id} />

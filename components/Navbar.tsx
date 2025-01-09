@@ -19,7 +19,7 @@ const handleSignIn = async () => {
 const Navbar = async () => {
   const session = await auth();
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-white shadow-sm font-work-sans">
+    <header className="fixed top-0 left-0 w-full z-50 bg-slate-200 shadow-sm font-work-sans">
       <nav className="px-5 py-4 flex justify-between items-center">
         {/* Logo */}
         <Link href="/">
