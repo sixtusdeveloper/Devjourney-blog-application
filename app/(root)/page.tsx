@@ -1,4 +1,3 @@
-import Image from "next/image";
 import SearchForm from "@/components/SearchForm";
 import PostCard, { PostTypeCard } from "@/components/PostCard";
 import { POSTS_QUERY } from "@/sanity/lib/queries";
@@ -24,7 +23,7 @@ export default async function Home({
   const session = await auth();
   console.log(session?.id);
 
-  const { data, sourceMap, tags } = await sanityFetch({
+  const { data } = await sanityFetch({
     query: POSTS_QUERY,
     params,
   });

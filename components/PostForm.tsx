@@ -18,8 +18,12 @@ const PostForm = () => {
   const { toast } = useToast();
 
   const router = useRouter();
+  type FormState = {
+    error: string;
+    status: "INITIAL" | "SUCCESS" | "ERROR";
+  };
 
-  const handleFormSubmit = async (prevState: any, formData: FormData) => {
+  const handleFormSubmit = async (prevState: FormState, formData: FormData) => {
     try {
       const formValues = {
         title: formData.get("title") as string,

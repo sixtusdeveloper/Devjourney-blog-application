@@ -5,7 +5,6 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import UserPosts from "@/components/UserPosts";
 import { Suspense } from "react";
-import PostCardSkeleton from "@/components/PostCard";
 
 export const experimental_ppr = true;
 
