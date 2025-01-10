@@ -41,14 +41,14 @@ const Navbar = ({ session }: NavbarProps) => {
 
         {/* Desktop Links */}
         <div className="hidden sm:flex items-center gap-8">
+          <Link href="/about" className="hover:text-blue-600 text-base">
+            About
+          </Link>
           <Link href="/FAQ" className="hover:text-blue-600 text-base">
             FAQ
           </Link>
-          <Link href="/terms" className="hover:text-blue-600 text-base">
-            Terms
-          </Link>
-          <Link href="/privacy" className="hover:text-blue-600 base">
-            Privacy Policy
+          <Link href="/contact" className="hover:text-blue-600 base">
+            Contact
           </Link>
           <Link
             href="https://www.sixtusdev.net"
@@ -113,25 +113,34 @@ const Navbar = ({ session }: NavbarProps) => {
           <ul className="flex flex-col items-center gap-6 text-lg">
             <li>
               <Link
-                href="/terms"
+                href="/about"
                 className="hover:text-blue-400"
                 onClick={toggleMenu}
               >
-                Terms
+                About
               </Link>
             </li>
             <li>
               <Link
-                href="/privacy"
+                href="/FAQ"
                 className="hover:text-blue-400"
                 onClick={toggleMenu}
               >
-                Privacy Policy
+                FAQ
               </Link>
             </li>
             <li>
               <Link
-                href="https://mywebsite.com"
+                href="/contact"
+                className="hover:text-blue-400"
+                onClick={toggleMenu}
+              >
+                Contact
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="https://www.sixtusdev.net"
                 target="_blank"
                 className="hover:text-blue-400"
                 onClick={toggleMenu}

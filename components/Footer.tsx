@@ -11,23 +11,18 @@ const Footer = () => {
           <ul className="footer-nav">
             <h6 className="footer-title">Help</h6>
             <li>
-              <a href="#" className="link link-hover">
+              <a href="/post/create" className="link link-hover">
                 Getting Started
               </a>
             </li>
             <li>
-              <a href="#" className="link link-hover">
+              <a href="/docs" className="link link-hover">
                 Documentation
               </a>
             </li>
             <li>
-              <a href="#" className="link link-hover">
+              <a href="/FAQ" className="link link-hover">
                 FAQ
-              </a>
-            </li>
-            <li>
-              <a href="#" className="link link-hover">
-                Community
               </a>
             </li>
           </ul>
@@ -37,23 +32,18 @@ const Footer = () => {
           <ul className="footer-nav">
             <h6 className="footer-title">Company</h6>
             <li>
-              <a href="#" className="link link-hover">
+              <a href="/about" className="link link-hover">
                 About Us
               </a>
             </li>
             <li>
-              <a href="#" className="link link-hover">
+              <a href="/contact" className="link link-hover">
                 Contact
               </a>
             </li>
             <li>
-              <a href="#" className="link link-hover">
+              <a href="/career" className="link link-hover">
                 Careers
-              </a>
-            </li>
-            <li>
-              <a href="#" className="link link-hover">
-                Press
               </a>
             </li>
           </ul>
@@ -63,23 +53,18 @@ const Footer = () => {
           <ul className="footer-nav">
             <h6 className="footer-title">Legal</h6>
             <li>
-              <a href="#" className="link link-hover">
+              <a href="/terms" className="link link-hover">
                 Terms of Service
               </a>
             </li>
             <li>
-              <a href="#" className="link link-hover">
+              <a href="/privacy" className="link link-hover">
                 Privacy Policy
               </a>
             </li>
             <li>
-              <a href="#" className="link link-hover">
+              <a href="/cookie" className="link link-hover">
                 Cookie Policy
-              </a>
-            </li>
-            <li>
-              <a href="#" className="link link-hover">
-                Updates
               </a>
             </li>
           </ul>
