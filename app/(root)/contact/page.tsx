@@ -1,160 +1,93 @@
 "use client";
+import React from "react";
 
-import React, { useState } from "react";
-import Image from "next/image";
-
-const ContactPage: React.FC = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission logic here
-    console.log("Form submitted:", formData);
-  };
-
+const Contact = () => {
   return (
-    <section className="min-h-screen w-full bg-gray-900 bg-cover bg-center relative">
-      {/* Background Image */}
-      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-
-      {/* Content Container */}
-      <div className="relative px-4 md:px-10 py-20 max-w-7xl mx-auto text-white">
-        <div className="text-center">
-          <h1 className="text-4xl font-extrabold mb-4">Get in Touch</h1>
-          <p className="text-xl mb-10">
-            We'd love to hear from you. Fill out the form below or reach out to
-            us through other contact methods.
-          </p>
-        </div>
-
-        {/* Contact Details */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
-          <div className="text-center md:text-left">
-            <h2 className="text-2xl font-semibold mb-4">Contact Information</h2>
-            <p className="text-lg mb-6">
-              We are available to help you with any inquiries you might have.
+    <>
+      <section className="w-full mx-auto">
+        <div
+          className="w-full min-h-screen lg:min-h-[430px] bg-cover bg-center flex items-center justify-center text-center relative md:mt-12 mt-10 md:py-8 md:px-6"
+          style={{
+            backgroundImage: "url('/about-bg.webp')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+          <div className="text-center relative z-10 max-w-4xl mx-auto space-y-6 px-4">
+            <h1 className="text-4xl sm:text-5xl font-bold text-slate-100 tracking-wide-34-bold">
+              Let's Discuss About Your Career!
+            </h1>
+            <p className="text-base font-semibold !max-w-2xl mx-auto text-slate-200 py-2 leading-6">
+              Have questions? We’re here to help you with all your housing
+              needs. Whether you’re buying, renting, or investing, feel free to
+              reach out to us.
             </p>
-            <div className="flex items-center mb-4">
-              <Image
-                src="/email-icon.svg"
-                alt="Email"
-                width={30}
-                height={30}
-                className="mr-4"
-              />
-              <a
-                href="mailto:contact@yourdomain.com"
-                className="text-xl hover:text-green-400"
-              >
-                contact@yourdomain.com
-              </a>
-            </div>
-            <div className="flex items-center mb-4">
-              <Image
-                src="/phone-icon.svg"
-                alt="Phone"
-                width={30}
-                height={30}
-                className="mr-4"
-              />
-              <span className="text-xl">+1 234 567 890</span>
-            </div>
-            <div className="flex items-center mb-4">
-              <Image
-                src="/location-icon.svg"
-                alt="Location"
-                width={30}
-                height={30}
-                className="mr-4"
-              />
-              <span className="text-xl">123 Street, City, Country</span>
-            </div>
-          </div>
-
-          {/* Contact Form */}
-          <div className="bg-white text-gray-900 rounded-lg shadow-lg p-8">
-            <h2 className="text-2xl font-semibold mb-6">Send a Message</h2>
-            <form onSubmit={handleSubmit}>
-              <div className="mb-4">
-                <label
-                  htmlFor="name"
-                  className="block text-lg font-medium mb-2"
-                >
-                  Your Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  className="w-full p-3 border border-gray-300 rounded-md"
-                  placeholder="Enter your full name"
-                  required
-                />
-              </div>
-
-              <div className="mb-4">
-                <label
-                  htmlFor="email"
-                  className="block text-lg font-medium mb-2"
-                >
-                  Your Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  className="w-full p-3 border border-gray-300 rounded-md"
-                  placeholder="Enter your email"
-                  required
-                />
-              </div>
-
-              <div className="mb-6">
-                <label
-                  htmlFor="message"
-                  className="block text-lg font-medium mb-2"
-                >
-                  Your Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  className="w-full p-3 border border-gray-300 rounded-md"
-                  rows={4}
-                  placeholder="Write your message here"
-                  required
-                ></textarea>
-              </div>
-
-              <button
-                type="submit"
-                className="w-full py-3 bg-green-500 text-white font-semibold rounded-md hover:bg-green-600"
-              >
-                Send Message
-              </button>
-            </form>
+            <button></button>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <section className="contact-details w-full py-12 px-6">
+        <div className="contact-section max-w-6xl mx-auto">
+          <h2 className="text-xl sm:text-2xl font-bold text-gray-700 py-2">
+            Our Contact Information
+          </h2>
+          <p className="text-base font-sans font-semibold text-gray-600">
+            If you would like to connect with us or need assistance navigating
+            your development journey, here’s how you can get in touch:
+          </p>
+
+          <div className="contact-info">
+            <div className="info-item p-4 border rounded-lg bg-slate-100 shadow-md">
+              <h3 className="text-xl sm:text-2xl font-semibold text-gray-700 py-2">
+                Email Us
+              </h3>
+              <p className="text-base font-medium text-gray-600">
+                <a href="mailto:contact@sixtusdev.net">contact@sixtusdev.net</a>
+              </p>
+            </div>
+
+            <div className="info-item p-4 border rounded-lg bg-slate-100 shadow-md">
+              <h3 className="text-xl sm:text-2xl font-smeibold text-gray-700 py-2">
+                Call Us
+              </h3>
+              <p className="text-base font-medium text-gray-600">
+                <a href="tel:+1234567890">+ (234) 902 2048 105</a>
+              </p>
+            </div>
+
+            <div className="info-item bg-slate-100 p-4 border rounded-lg shadow-md">
+              <h3 className="text-xl sm:text-2xl font-semibold text-gray-700 py-2">
+                Visit Our Office
+              </h3>
+              <p className="text-base font-semibold text-gray-600">
+                96 Housing St, Suite 400
+                <br />
+                Lagos State, Nigeria
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="contact-section contact-section max-w-6xl mx-auto">
+          <h2 className="text-xl sm:text-2xl font-semibold text-gray-700 py-2">
+            Our Location
+          </h2>
+          <div className="location-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=..."
+              width="600"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+    </>
   );
 };
 
-export default ContactPage;
+export default Contact;

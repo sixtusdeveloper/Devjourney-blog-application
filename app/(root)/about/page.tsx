@@ -16,7 +16,7 @@ const About = () => {
       >
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
-        <div className="relative z-10 max-w-3xl text-white mx-auto space-y-6 px-4">
+        <div className="relative z-10 max-w-4xl text-white mx-auto space-y-6 px-4">
           <h1 className="text-4xl sm:text-5xl font-bold tracking-wide">
             Inspiring growth, sparking creativity, and connecting innovators
             worldwide

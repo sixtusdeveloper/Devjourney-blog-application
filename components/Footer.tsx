@@ -37,11 +37,7 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <a
-                href="/https://www.sixtusdev.net/#contact"
-                target="_blank"
-                className="link link-hover"
-              >
+              <a href="/contact" className="link link-hover">
                 Contact
               </a>
             </li>

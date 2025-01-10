@@ -318,3 +318,82 @@
 .modal-background::-webkit-scrollbar {
   display: none;
 }
+
+/* Contact details section */
+.contact-details {
+  padding: 60px 20px;
+  background-color: #f7f7f7;
+}
+
+.contact-section {
+  margin-bottom: 40px;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.info-item {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.info-item:last-child {
+  margin-right: 0;
+}
+
+.info-item a {
+  color: #4a90e2;
+  text-decoration: none;
+}
+
+.location-map {
+  margin-top: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.location-map iframe {
+  width: 100%;
+  border: 0;
+  border-radius: 8px;
+}
+
+/* Footer section */
+.contact-footer {
+  background-color: #1e2a37;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+.contact-footer p {
+  margin: 0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  /* Hero section with background image */
+  .contact-hero {
+    padding: 70px 10px 10px 10px;
+  }
+
+  .contact-hero-content {
+    padding: 20px 8px;
+    max-width: 98%;
+  }
+
+  .contact-info {
+    flex-direction: column;
+  }
+
+  .info-item {
+    margin-bottom: 20px;
+  }
+
+  .contact-footer p {
+    font-size: 0.9rem;
+  }
+}

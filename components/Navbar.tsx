@@ -57,6 +57,9 @@ const Navbar = ({ session }: NavbarProps) => {
           >
             My Website
           </Link>
+          <Link href="/contact" className="hover:text-blue-600 base">
+            Contact
+          </Link>
           {session && session?.user ? (
             <>
               <div className="flex items-center justify-center gap-2">
@@ -146,6 +149,15 @@ const Navbar = ({ session }: NavbarProps) => {
                 onClick={toggleMenu}
               >
                 My Website
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/contact"
+                className="hover:text-blue-400"
+                onClick={toggleMenu}
+              >
+                Contact
               </Link>
             </li>
             {session && session?.user ? (
