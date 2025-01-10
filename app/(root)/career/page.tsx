@@ -87,9 +87,10 @@ const Courses = () => {
         </h3>
         <p className="text-lg text-slate-200 max-w-2xl mx-auto mb-6">
           Join thousands of learners who have advanced their careers with our
-          expertly crafted courses.
+          expertly crafted courses. You could start by sharing with the world
+          the little you know!
         </p>
-        <Link href="/">
+        <Link href="/post/create">
           <button className="px-6 py-3 bg-white text-blue-600 font-semibold rounded-full shadow-lg hover:bg-gray-100">
             Get Started
           </button>
