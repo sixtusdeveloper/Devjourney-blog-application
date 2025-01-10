@@ -7,7 +7,7 @@ const About = () => {
     <div className="flex flex-col items-center">
       {/* Hero Section */}
       <section
-        className="w-full min-h-screen lg:min-h-[430px] bg-cover bg-center flex items-center justify-center text-center relative md:mt-12 mt-10 md:py-8 md:px-6"
+        className="w-full min-h-screen lg:min-h-[450px] bg-cover bg-center flex items-center justify-center text-center relative md:mt-12 mt-10 md:py-8 md:px-6"
         style={{
           backgroundImage: "url('/about-bg.webp')",
           backgroundSize: "cover",
@@ -16,7 +16,7 @@ const About = () => {
       >
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
-        <div className="relative z-10 max-w-4xl text-white mx-auto space-y-6 px-4">
+        <div className="relative my-8 z-10 max-w-4xl text-white mx-auto space-y-6 px-4">
           <h1 className="text-4xl sm:text-5xl font-bold tracking-wide">
             Inspiring growth, sparking creativity, and connecting innovators
             worldwide
