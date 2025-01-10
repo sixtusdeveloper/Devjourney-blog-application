@@ -1,18 +1,5 @@
-// import Navbar from "@/components/Navbar";
-
-// export default function Layout({
-//   children,
-// }: Readonly<{ children: React.ReactNode }>) {
-//   return (
-//     <main className="font-work-sans">
-//       <Navbar />
-//       {children}
-//     </main>
-//   );
-// }
-
-// New code to implement the Hamburger menu
 import { auth } from "@/auth";
+import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 
 export default async function Layout({
@@ -27,6 +14,7 @@ export default async function Layout({
       <main>
         <Navbar session={session} />
         {children}
+        <Footer />
       </main>
     </>
   );

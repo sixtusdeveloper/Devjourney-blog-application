@@ -259,3 +259,28 @@
   border-radius: 50% !important;
   object-fit: cover !important;
 }
+
+.social-icon {
+  color: aliceblue;
+  background-color: darkslategrey;
+  padding: 3px 5px;
+  border-radius: 50%;
+}
+
+.footer-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: darkslategray;
+}
+.footer-nav {
+  list-style: none;
+  padding: 10px 0;
+}
+
+.footer-nav > li > a {
+  color: #777;
+  font-size: 15px;
+}
+.footer-nav > li > a:hover {
+  color: indigo;
+}

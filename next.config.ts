@@ -2,6 +2,10 @@ import {withSentryConfig} from '@sentry/nextjs';
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // new configuration
+  reactStrictMode: true,
+  productionBrowserSourceMaps: true, // Enable source maps for debugging
+
    typescript: {
     ignoreBuildErrors: true,
   },
