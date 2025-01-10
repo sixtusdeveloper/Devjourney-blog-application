@@ -1,3 +1,12 @@
+Check out Devjourney - A full-stack blog application
+[
+![devjourney-blog-screenshot](https://github.com/user-attachments/assets/6b13f491-62dd-4d07-a63b-68e9c81ca391)
+](https://devjourney-blog-khaki.vercel.app/post/TWryEU74aunIsETY6gUiDO)
+
+
+
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
