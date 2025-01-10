@@ -1,83 +1,11 @@
-// import Link from "next/link";
-// import Image from "next/image";
-// import { auth, signOut, signIn } from "@/auth";
-// import { BadgePlus, LogOut } from "lucide-react";
-// import { AvatarImage, Avatar } from "@/components/ui/avatar";
-
-// // Define server action functions outside the component
-// const handleSignOut = async () => {
-//   "use server";
-//   await signOut({ redirectTo: "/" });
-// };
-
-// const handleSignIn = async () => {
-//   "use server";
-//   await signIn("github");
-// };
-
-// // Navbar Component
-// const Navbar = async () => {
-//   const session = await auth();
-//   return (
-//     <header className="fixed top-0 left-0 w-full z-50 bg-slate-200 shadow-sm font-work-sans">
-//       <nav className="px-5 py-4 flex justify-between items-center">
-//         {/* Logo */}
-//         <Link href="/">
-//           <Image src="/logo.png" alt="Logo" width={30} height={30} />
-//         </Link>
-
-//         {/* Navigation Links */}
-//         <div className="flex items-center gap-5">
-//           {session && session?.user ? (
-//             <>
-//               <Link href="/post/create">
-//                 <span className="py-2 px-4 bg-gradient-to-r from-indigo-600 via-blue-500 to-purple-600 rounded-md text-white text-sm tracking-wide block max-sm:hidden">
-//                   Create
-//                 </span>
-//                 <BadgePlus className="size-6 sm:hidden text-blue-500" />
-//               </Link>
-
-//               <form action={handleSignOut}>
-//                 <button type="submit" className="hover:text-red-600">
-//                   <span className="max-sm:hidden ring-1 px-4 py-2 rounded-md">
-//                     Logout
-//                   </span>
-//                   <LogOut className="size-6 sm:hidden text-red-500" />
-//                 </button>
-//               </form>
-
-//               <Link href={`/user/${session?.user?.id}`}>
-//                 <Avatar className="size-10">
-//                   <AvatarImage
-//                     src={session?.user?.image || "/avatar.jpg"}
-//                     alt={session?.user?.name || "User Avatar"}
-//                   />
-//                 </Avatar>
-//               </Link>
-//             </>
-//           ) : (
-//             <form action={handleSignIn}>
-//               <button type="submit" className="hover:text-blue-600">
-//                 Signin
-//               </button>
-//             </form>
-//           )}
-//         </div>
-//       </nav>
-//     </header>
-//   );
-// };
-
-// export default Navbar;
-
-// Adjustment
-
+// Adjusted code
 "use client";
 
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import { BadgePlus, LogOut, Menu, User, X } from "lucide-react";
+import { BadgePlus, LogOut, Menu, X } from "lucide-react";
+import { FaGithub } from "react-icons/fa";
 import { AvatarImage, Avatar } from "@/components/ui/avatar";
 import { handleSignOut, handleSignIn } from "@/lib/server-actions";
 
@@ -165,7 +93,7 @@ const Navbar = ({ session }: NavbarProps) => {
                 type="submit"
                 className="inline-flex gap-1 items-center text-center py-2 px-4 bg-gradient-to-r from-indigo-600 via-blue-500 to-purple-600 rounded-lg text-white text-sm tracking-wide"
               >
-                <User className="size-5 text-white" />
+                <FaGithub className="size-5 text-white" />
                 <span className="ml-1 text-base">Signin</span>
               </button>
             </form>
@@ -255,7 +183,7 @@ const Navbar = ({ session }: NavbarProps) => {
                     type="submit"
                     className="inline-flex gap-1 items-center text-center py-2 px-4 bg-gradient-to-r from-indigo-600 via-blue-500 to-purple-600 rounded-lg text-white text-sm tracking-wide"
                   >
-                    <User className="size-5 text-white" />
+                    <FaGithub className="size-5 text-white" />
                     <span className="ml-1 text-base">Signin</span>
                   </button>
                 </form>
@@ -269,3 +197,76 @@ const Navbar = ({ session }: NavbarProps) => {
 };
 
 export default Navbar;
+
+// Original code
+// import Link from "next/link";
+// import Image from "next/image";
+// import { auth, signOut, signIn } from "@/auth";
+// import { BadgePlus, LogOut } from "lucide-react";
+// import { AvatarImage, Avatar } from "@/components/ui/avatar";
+
+// // Define server action functions outside the component
+// const handleSignOut = async () => {
+//   "use server";
+//   await signOut({ redirectTo: "/" });
+// };
+
+// const handleSignIn = async () => {
+//   "use server";
+//   await signIn("github");
+// };
+
+// // Navbar Component
+// const Navbar = async () => {
+//   const session = await auth();
+//   return (
+//     <header className="fixed top-0 left-0 w-full z-50 bg-slate-200 shadow-sm font-work-sans">
+//       <nav className="px-5 py-4 flex justify-between items-center">
+//         {/* Logo */}
+//         <Link href="/">
+//           <Image src="/logo.png" alt="Logo" width={30} height={30} />
+//         </Link>
+
+//         {/* Navigation Links */}
+//         <div className="flex items-center gap-5">
+//           {session && session?.user ? (
+//             <>
+//               <Link href="/post/create">
+//                 <span className="py-2 px-4 bg-gradient-to-r from-indigo-600 via-blue-500 to-purple-600 rounded-md text-white text-sm tracking-wide block max-sm:hidden">
+//                   Create
+//                 </span>
+//                 <BadgePlus className="size-6 sm:hidden text-blue-500" />
+//               </Link>
+
+//               <form action={handleSignOut}>
+//                 <button type="submit" className="hover:text-red-600">
+//                   <span className="max-sm:hidden ring-1 px-4 py-2 rounded-md">
+//                     Logout
+//                   </span>
+//                   <LogOut className="size-6 sm:hidden text-red-500" />
+//                 </button>
+//               </form>
+
+//               <Link href={`/user/${session?.user?.id}`}>
+//                 <Avatar className="size-10">
+//                   <AvatarImage
+//                     src={session?.user?.image || "/avatar.jpg"}
+//                     alt={session?.user?.name || "User Avatar"}
+//                   />
+//                 </Avatar>
+//               </Link>
+//             </>
+//           ) : (
+//             <form action={handleSignIn}>
+//               <button type="submit" className="hover:text-blue-600">
+//                 Signin
+//               </button>
+//             </form>
+//           )}
+//         </div>
+//       </nav>
+//     </header>
+//   );
+// };
+
+// export default Navbar;
