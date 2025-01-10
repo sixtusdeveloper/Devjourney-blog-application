@@ -84,14 +84,14 @@ const Footer = () => {
         <aside className="flex items-center justify-start flex-wrap gap-4">
           <div className="flex justify-center items-center gap-4">
             <Link
-              href="https://github.com/yourusername"
+              href="https://github.com/sixtusdeveloper/"
               target="_blank"
               className="link link-hover"
             >
               <FaGithub size={24} className="social-icon" />
             </Link>
             <Link
-              href="https://www.linkedin.com/in/yourusername"
+              href="https://www.linkedin.com/in/sixtusushrey/"
               target="_blank"
               className="link link-hover"
             >

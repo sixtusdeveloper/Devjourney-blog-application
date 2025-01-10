@@ -4,7 +4,7 @@ const Documentation = () => {
   return (
     <section className="py-10 bg-gray-50">
       <div
-        className="w-full min-h-screen lg:min-h-[280px] bg-cover bg-center flex items-center justify-center text-center relative md:mt-12 mt-10 md:py-8 md:px-6"
+        className="w-full min-h-screen lg:min-h-[280px] bg-cover bg-center flex items-center justify-center text-center relative md:mt-8 mt-10 md:py-8 md:px-6"
         style={{
           backgroundImage: "url('/docs-bg.avif')",
           backgroundSize: "cover",
