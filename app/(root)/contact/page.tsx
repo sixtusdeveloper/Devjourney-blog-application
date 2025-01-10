@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import React from "react";
 
 const Contact = () => {
@@ -23,7 +24,11 @@ const Contact = () => {
               needs. Whether you’re buying, renting, or investing, feel free to
               reach out to us.
             </p>
-            <button></button>
+            <Link href="https://sixtusdev.net" target="_blank">
+              <button className="mt-6 px-6 py-4 text-white bg-gradient-to-r from-green-500 via-indigo-600 to-purple-800 font-semibold rounded-full shadow-lg hover:scale-95">
+                Visit my website
+              </button>
+            </Link>
           </div>
         </div>
       </section>
