@@ -134,7 +134,7 @@ const Navbar = ({ session }: NavbarProps) => {
               <div className="flex items-center justify-center gap-2">
                 <Link
                   href="/post/create"
-                  className="inline-flex gap-1 items-center text-center py-2 px-4 bg-gradient-to-r from-indigo-600 via-blue-500 to-purple-600 rounded-md text-white text-sm tracking-wide max-sm:hidden"
+                  className="inline-flex gap-1 items-center text-center py-2 px-4 bg-gradient-to-r from-indigo-600 via-blue-500 to-purple-600 rounded-lg text-white text-sm tracking-wide max-sm:hidden"
                 >
                   <BadgePlus className="size-5 text-white" />
                   <span className="ml-1 text-base">Create</span>
@@ -143,7 +143,7 @@ const Navbar = ({ session }: NavbarProps) => {
                 <form action={handleSignOut}>
                   <button
                     type="submit"
-                    className="hover:text-red-600 ring-1 px-4 py-2 items-center text-center rounded-md inline-flex gap-1"
+                    className="hover:text-red-600 ring-1 px-4 py-2 items-center text-center rounded-lg inline-flex gap-1"
                   >
                     <LogOut className="size-5 text-purple-500 hover:text-red-500" />
                     <span className="ml-1 text-base">Logout</span>
