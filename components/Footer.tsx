@@ -98,7 +98,7 @@ const Footer = () => {
               <FaLinkedin size={24} className="social-icon" />
             </Link>
             <Link
-              href="https://twitter.com/yourusername"
+              href="https://x.com/sixtusdev/"
               target="_blank"
               className="link link-hover"
             >
