@@ -35,6 +35,7 @@
 
 // export default View;
 
+// This version of code is used because nextjs no longer use unstable_after afunctions. The unstable_after as after function is now replaced with after function. The after function is used to cache the views count and increment the views count when the page is loaded. The views count is fetched from the server using the POST_VIEWS_QUERY and the views count is updated using the writeClient.patch function. The views count is displayed on the page using the totalViews variable. The Ping component is used to display the ping icon on the page. The View component is exported as the default component from the file.
 "use client";
 
 import React, { useEffect, useState } from "react";
