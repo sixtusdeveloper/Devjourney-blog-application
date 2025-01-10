@@ -163,7 +163,7 @@ const Navbar = ({ session }: NavbarProps) => {
             <form action={handleSignIn}>
               <button
                 type="submit"
-                className="inline-flex gap-1 items-center text-center py-2 px-4 bg-gradient-to-r from-indigo-600 via-blue-500 to-purple-600 rounded-md text-white text-sm tracking-wide"
+                className="inline-flex gap-1 items-center text-center py-2 px-4 bg-gradient-to-r from-indigo-600 via-blue-500 to-purple-600 rounded-lg text-white text-sm tracking-wide"
               >
                 <User className="size-5 text-white" />
                 <span className="ml-1 text-base">Signin</span>
@@ -217,7 +217,7 @@ const Navbar = ({ session }: NavbarProps) => {
                   <Link
                     href="/post/create"
                     onClick={toggleMenu}
-                    className="inline-flex gap-1 items-center text-center py-3 px-4 bg-gradient-to-r from-indigo-600 via-blue-500 to-purple-600 rounded-md text-white text-sm tracking-wide"
+                    className="inline-flex gap-1 items-center text-center py-3 px-4 bg-gradient-to-r from-indigo-600 via-blue-500 to-purple-600 rounded-lg text-white text-sm tracking-wide"
                   >
                     <BadgePlus className="size-6 sm:hidden text-white" />
                     <span className="ml-1">Create</span>
@@ -227,7 +227,7 @@ const Navbar = ({ session }: NavbarProps) => {
                   <form action={handleSignOut}>
                     <button
                       type="submit"
-                      className="hover:text-red-600 text-center items-center inline-flex gap-1 ring-1 px-4 py-3 rounded-md"
+                      className="hover:text-red-600 text-center items-center inline-flex gap-1 ring-1 px-4 py-3 rounded-lg"
                     >
                       <span className="ml-1">Logout</span>
                       <LogOut className="size-6 text-purple-500" />
@@ -251,8 +251,12 @@ const Navbar = ({ session }: NavbarProps) => {
             ) : (
               <li>
                 <form action={handleSignIn}>
-                  <button type="submit" className="hover:text-blue-400">
-                    Signin
+                  <button
+                    type="submit"
+                    className="inline-flex gap-1 items-center text-center py-2 px-4 bg-gradient-to-r from-indigo-600 via-blue-500 to-purple-600 rounded-lg text-white text-sm tracking-wide"
+                  >
+                    <User className="size-5 text-white" />
+                    <span className="ml-1 text-base">Signin</span>
                   </button>
                 </form>
               </li>
