@@ -287,6 +287,16 @@
   border-radius: 50%;
 }
 
+/* Hide scrollbar */
+* {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+*::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
 .footer-title {
   font-size: 1.5rem;
   font-weight: 600;

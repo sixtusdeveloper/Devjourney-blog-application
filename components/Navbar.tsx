@@ -47,8 +47,8 @@ const Navbar = ({ session }: NavbarProps) => {
           <Link href="/FAQ" className="hover:text-blue-600 text-base">
             FAQ
           </Link>
-          <Link href="/contact" className="hover:text-blue-600 base">
-            Contact
+          <Link href="/career" className="hover:text-blue-600 base">
+            Courses
           </Link>
           <Link
             href="https://www.sixtusdev.net"
@@ -131,11 +131,11 @@ const Navbar = ({ session }: NavbarProps) => {
             </li>
             <li>
               <Link
-                href="/contact"
+                href="/career"
                 className="hover:text-blue-400"
                 onClick={toggleMenu}
               >
-                Contact
+                Courses
               </Link>
             </li>
             <li>
