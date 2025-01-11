@@ -90,7 +90,10 @@ const Navbar = ({ session }: NavbarProps) => {
                   </button>
                 </form>
               </div>
-              <Link href={`/user/${session?.user?.id}`}>
+              <Link
+                href={`/user/${session?.user?.id}`}
+                className="cursor-not-allowed"
+              >
                 <Avatar className="size-10">
                   <AvatarImage
                     src={session?.user?.image || "/avatar.jpg"}

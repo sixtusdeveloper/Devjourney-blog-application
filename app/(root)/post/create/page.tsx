@@ -11,7 +11,7 @@ const page = async () => {
   return (
     <>
       <section
-        className="relative md:mt-12 mt-10 md:py-4 md:px-6 min-h-screen lg:min-h-[430px] flex items-center justify-center bg-cover bg-center"
+        className="relative md:mt-12 mt-10 md:py-10 md:px-6 min-h-screen lg:min-h-[430px] flex items-center justify-center bg-cover bg-center"
         style={{
           backgroundImage: "url('/create-bg.avif')",
         }}
@@ -20,6 +20,9 @@ const page = async () => {
         <div className="absolute inset-0 bg-black/60"></div>
         {/* Content */}
         <div className="relative z-10 text-white text-center px-4 space-y-6 max-w-3xl">
+          <h4 className="mt-8 inline-block bg-white/10 text-base sm:text-lg font-semibold px-4 py-2 rounded-full shadow-md hover:shadow-lg transition-all">
+            👋 Hi, {session?.user?.name || "Hi there!"}
+          </h4>
           <h1 className="text-4xl sm:text-5xl font-bold tracking-wide">
             Share Your Thoughts and ideas with the World!
           </h1>

@@ -37,13 +37,16 @@ export default async function Home({
     <>
       {/* Hero Section */}
       <section
-        className="relative w-full min-h-screen lg:min-h-[430px] bg-cover bg-center flex items-center justify-center text-center md:mt-12 mt-10 md:py-8 md:px-6"
+        className="relative w-full min-h-screen lg:min-h-[430px] bg-cover bg-center flex items-center justify-center text-center md:mt-12 mt-10 md:py-10 md:px-6"
         style={{
           backgroundImage: "url('/hero-bg.avif')",
         }}
       >
-        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div className="absolute inset-0 bg-black bg-opacity-60"></div>
         <div className="relative z-10 max-w-3xl text-white mx-auto space-y-6 px-4">
+          <h4 className="mt-8 inline-block bg-white/10 text-lg sm:text-xl font-semibold px-4 py-2 rounded-full shadow-md hover:shadow-lg transition-all">
+            👋 Hi, {session?.user?.name || "Hi there!"}
+          </h4>
           <h1 className="text-4xl sm:text-5xl font-bold tracking-wide">
             Welcome to Devjourney Blog
           </h1>

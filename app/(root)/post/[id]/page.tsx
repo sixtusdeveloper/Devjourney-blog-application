@@ -52,7 +52,7 @@ const page = async ({ params }: { params: Promise<{ id: string }> }) => {
   return (
     <>
       <section
-        className="relative md:mt-12 mt-10 md:py-4 md:px-6 min-h-screen lg:min-h-[430px] flex items-center justify-center bg-cover bg-center"
+        className="relative md:mt-12 mt-10 md:py-8 md:px-6 min-h-screen lg:min-h-[430px] flex items-center justify-center bg-cover bg-center"
         style={{ backgroundImage: `url(${post.image})` }}
       >
         {/* Overlay */}

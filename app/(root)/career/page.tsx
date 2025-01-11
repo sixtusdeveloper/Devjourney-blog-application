@@ -29,9 +29,9 @@ const Courses = () => {
             your skills and accelerate your growth in technology, creativity,
             and innovation.
           </p>
-          <Link href="#course-list">
+          <Link href="/docs">
             <button className="mt-6 px-6 py-4 bg-gradient-to-r from-green-500 via-indigo-600 to-purple-800 font-semibold rounded-full shadow-lg hover:scale-95">
-              Explore Courses
+              Read Our Docs
             </button>
           </Link>
         </div>
@@ -46,7 +46,7 @@ const Courses = () => {
       </div>
 
       {/* Courses Section */}
-      <div id="course-list" className="py-16 w-full bg-white">
+      <div className="py-16 w-full bg-white">
         <div className="container relative max-w-6xl px-4 mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-700 text-center mb-10">
             Featured Courses
