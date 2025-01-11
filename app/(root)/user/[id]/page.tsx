@@ -19,34 +19,37 @@ const page = async ({ params }: { params: Promise<{ id: string }> }) => {
 
   return (
     <>
-      <section className="mt-12 lg:mt-14 profile_container">
-        <div className="profile_card">
-          <div className="profile_title">
-            <h3 className="text-24-black uppercase text-center line-clamp-1">
-              {user.name}
-            </h3>
+      <section className="mt-12 lg:mt-14 w-full">
+        <div className="bg-blue-100 w-full py-10">
+          <div className="flex justify-center pt-14 items-center mx-auto max-w-7xl">
+            <div className="profile_card mt-12">
+              <div className="profile_title">
+                <h3 className="text-24-black uppercase text-center line-clamp-1">
+                  {user.name}
+                </h3>
+              </div>
+
+              <Image
+                src={user.image}
+                alt={user.name}
+                width={220}
+                height={220}
+                className="user_profile_image rounded-full border-2 border-indigo-400"
+              />
+
+              <p className="text-30-extrabold mt-6 text-center">
+                @{user?.username}
+              </p>
+              <p className="mt-1 text-center text-14-normal">{user?.bio}</p>
+            </div>
           </div>
-
-          <Image
-            src={user.image}
-            alt={user.name}
-            width={220}
-            height={220}
-            className="user_profile_image rounded-full border-2 border-indigo-400"
-          />
-
-          <p className="text-30-extrabold mt-6 text-center">
-            @{user?.username}
-          </p>
-          <p className="mt-1 text-center text-14-normal">{user?.bio}</p>
         </div>
-
-        <div className="flex-1 flex flex-col gap-5 lg:-mt-5">
+        <div className="space-y-5 mt-8 py-8 max-w-7xl px-2 md:px-8 mx-auto">
           <p className="text-30-bold">
             {session?.id === id ? "Your" : "All"} Posts
           </p>
 
-          <ul className="card_grid-sm">
+          <ul className="card_grid-sm my-2">
             <Suspense fallback={<p className="">Loading...</p>}>
               <UserPosts id={id} />
             </Suspense>

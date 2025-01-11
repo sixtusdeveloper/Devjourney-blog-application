@@ -1,5 +1,5 @@
 import { cn, formatDate } from "@/lib/utils";
-import { EyeIcon } from "lucide-react";
+import { ClockIcon, EyeIcon } from "lucide-react";
 import Link from "next/link";
 import { Devpost, Author } from "@/sanity/types";
 import Image from "next/image";
@@ -7,14 +7,39 @@ import { Skeleton } from "@/components/ui/skeleton";
 
 export type PostTypeCard = Omit<Devpost, "author"> & { author?: Author };
 
+// Updated reading time calculation
+const calculateReadingTime = (title: string, excerpt: string): string => {
+  const words = (title + " " + excerpt).split(/\s+/).length;
+  const totalSeconds = Math.ceil((words / 200) * 60); // Calculate total reading time in seconds
+
+  // Calculate minutes and seconds
+  const minutes = Math.floor(totalSeconds / 60);
+  const seconds = totalSeconds % 60;
+
+  // Show at least "1 min" if total reading time is very short
+  if (minutes === 0 && seconds > 0) {
+    return `${seconds} sec read`;
+  }
+
+  return `${minutes} min ${seconds} sec read`;
+};
+
 const PostCard = ({ post }: { post: PostTypeCard }) => {
   const { _id, _createdAt, views, image, author, excerpt, category, title } =
     post;
+
+  // Calculate reading time with updated logic
+  const readingTime = calculateReadingTime(title || "", excerpt || "");
 
   return (
     <li className="devpost-card group">
       <div className="flex-between">
         <p className="text-gray-500 text-sm">{formatDate(_createdAt)}</p>
+
+        <div className="flex gap-1.5 items-center">
+          <ClockIcon className="size-5 text-gray-500" />
+          <span className="text-gray-500 text-sm">{readingTime}</span>
+        </div>
 
         <div className="flex gap-1.5">
           <EyeIcon className="size-6 text-blue-500" />
@@ -80,13 +105,15 @@ const PostCard = ({ post }: { post: PostTypeCard }) => {
 };
 
 export const PostCardSkeleton = () => {
-  <>
-    {[1, 2, 3, 4].map((i) => (
-      <li key={cn("skeleton", i)}>
-        <Skeleton className="post-card_skeleton" />
-      </li>
-    ))}
-  </>;
+  return (
+    <>
+      {[1, 2, 3, 4].map((i) => (
+        <li key={cn("skeleton", i)}>
+          <Skeleton className="post-card_skeleton" />
+        </li>
+      ))}
+    </>
+  );
 };
 
 export default PostCard;
