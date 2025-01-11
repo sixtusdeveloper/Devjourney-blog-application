@@ -5,7 +5,7 @@ import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa"; // Importing t
 
 const Footer = () => {
   return (
-    <section className="w-full bg-slate-200 border-t mx-auto">
+    <section className="w-full bg-slate-50 border-t mx-auto">
       <div className="max-w-5xl justify-between items-center mx-auto flex gap-8 flex-wrap p-10">
         <nav className="flex gap-6 flex-start">
           <ul className="footer-nav">
