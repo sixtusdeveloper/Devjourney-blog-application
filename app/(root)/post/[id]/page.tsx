@@ -10,7 +10,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import View from "@/components/View";
 import PostCard, { PostTypeCard } from "@/components/PostCard";
 
-export const experimental_ppr = true;
+// export const experimental_ppr = true;  I commented it out here
 const md = markdownit();
 
 // Utility function to calculate reading time
