@@ -12,7 +12,7 @@ export const faqs = [
     },
     {
       question: "Can I edit my posts after publishing?",
-      answer: "Yes, you can edit your posts anytime after they are published, however, this feature is currently undergoing some slight updates on it so it's not available to users at the moment. Nevertheless, you could contact me directly through the contact page, providing your content you wish to updated to your post and how you need it to be and it will be done as soon as possible.",
+      answer: "Yes, you can edit your posts anytime after they are published, however, this feature is currently undergoing some slight updates, therefore not available to users at the moment. Nevertheless, you could contact me directly through the contact page, providing your content you wish to update on your post and how you need it to be and it will be done as soon as possible.",
     },
     {
       question: "What are the community guidelines?",
