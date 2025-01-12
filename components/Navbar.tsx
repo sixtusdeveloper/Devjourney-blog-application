@@ -59,7 +59,7 @@ const Navbar = ({ session }: NavbarProps) => {
           <Link href="/career" className={getLinkClassNames("/career")}>
             Courses
           </Link>
-          <Link href="/career" className={getLinkClassNames("/docs")}>
+          <Link href="/docs" className={getLinkClassNames("/docs")}>
             Docs
           </Link>
           <Link
