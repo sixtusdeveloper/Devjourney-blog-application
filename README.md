@@ -1,7 +1,6 @@
 Check out Devjourney - A full-stack blog application
-[
-![devjourney-blog-screenshot](https://github.com/user-attachments/assets/6b13f491-62dd-4d07-a63b-68e9c81ca391)
-](https://devjourney-blog-khaki.vercel.app/post/TWryEU74aunIsETY6gUiDO)
+
+[![devjourney-blog-screenshot](https://github.com/user-attachments/assets/75f39a41-46d8-4443-9168-85496f208984)](https://devjourney-blog-khaki.vercel.app/)
 
 
 
