@@ -8,7 +8,7 @@ export const faqs = [
     {
       question: "How do I create an account?",
       answer:
-        "You can create an account by clicking the 'Signup' button on the homepage and following the registration process. This process uses GitHub OAuth for authentication. Therefore you must have a GitHub account to sign up.",
+        "You can create an account by clicking the 'Signup' button on the Navigation bar and following the registration process. This process uses GitHub OAuth for authentication. Therefore you must have a GitHub account to sign up.",
     },
     {
       question: "Can I edit my posts after publishing?",
