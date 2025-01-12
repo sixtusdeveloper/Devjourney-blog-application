@@ -59,6 +59,9 @@ const Navbar = ({ session }: NavbarProps) => {
           <Link href="/career" className={getLinkClassNames("/career")}>
             Courses
           </Link>
+          <Link href="/career" className={getLinkClassNames("/docs")}>
+            Docs
+          </Link>
           <Link
             href="https://www.sixtusdev.net"
             target="_blank"
@@ -151,6 +154,15 @@ const Navbar = ({ session }: NavbarProps) => {
                 onClick={toggleMenu}
               >
                 Courses
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/docs"
+                className="hover:text-blue-400"
+                onClick={toggleMenu}
+              >
+                Docs
               </Link>
             </li>
             <li>
