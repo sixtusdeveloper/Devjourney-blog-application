@@ -59,7 +59,7 @@ const page = async ({ params }: { params: Promise<{ id: string }> }) => {
         <div className="absolute inset-0 bg-black/60"></div>
 
         {/* Content */}
-        <div className="relative z-10 text-white text-center py-8 px-4 space-y-6 max-w-3xl">
+        <div className="relative z-10 text-white text-center py-4 sm:py-8 px-4 space-y-2 sm:space-y-6 max-w-3xl">
           <p className="inline-block bg-white/10 text-sm font-medium px-4 py-2 rounded-full shadow-md hover:shadow-lg transition-all">
             {formatDate(post?._createdAt)}
           </p>
@@ -86,8 +86,8 @@ const page = async ({ params }: { params: Promise<{ id: string }> }) => {
         </div>
       </section>
 
-      <section className="section_container">
-        <div className="space-y-5 mt-8 max-w-6xl md:px-8 mx-auto">
+      <section className="mt-8 w-full">
+        <div className="sace-y-2 sm:space-y-5 mt-8 max-w-6xl md:px-8 mx-auto">
           <div className="flex-between gap-5">
             <Link
               href={`/user/${post.author?._id}`}
@@ -129,10 +129,10 @@ const page = async ({ params }: { params: Promise<{ id: string }> }) => {
         <hr className="divider my-4" />
 
         {editorPosts?.length > 0 && (
-          <div className="space-y-5 mt-8 max-w-7xl px-2 sm:px-4 mx-auto">
+          <div className="space-y-5 mt-8 max-w-7xl sm:px-4 mx-auto">
             <p className="text-30-semibold">Related Posts</p>
 
-            <ul className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <ul className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {editorPosts.map((post: PostTypeCard, i: number) => (
                 <PostCard key={i} post={post} />
               ))}

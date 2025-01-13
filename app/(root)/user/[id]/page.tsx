@@ -21,7 +21,7 @@ const page = async ({ params }: { params: Promise<{ id: string }> }) => {
     <>
       <section className="mt-12 lg:mt-14 w-full">
         <div className="bg-blue-100 w-full py-10">
-          <div className="flex justify-center pt-14 items-center mx-auto max-w-7xl">
+          <div className="flex justify-center pt-14 px-2 md:px-8 items-center mx-auto max-w-7xl">
             <div className="profile_card mt-12">
               <div className="profile_title">
                 <h3 className="text-24-black uppercase text-center line-clamp-1">
