@@ -89,9 +89,9 @@ export default async function Home({
           {/* Previous Button */}
           <Link
             href={`/?page=${page - 1}${query ? `&query=${query}` : ""}`}
-            className={`px-4 py-2 rounded-md ${
+            className={`px-4 py-2 rounded-lg ${
               page > 1
-                ? "bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-700 hover:scale-95 text-white flex items-center cursor-pointer tracking-wide text-base font-semibold rounded-full shadow-lg transition duration-300"
+                ? "bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-700 hover:scale-95 text-white flex items-center cursor-pointer tracking-wide text-base font-semibold rounded-lg shadow-lg transition duration-300"
                 : "bg-gray-100 text-gray-400 cursor-not-allowed"
             }`}
             aria-disabled={page <= 1}
