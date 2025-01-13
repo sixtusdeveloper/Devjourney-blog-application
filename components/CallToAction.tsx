@@ -10,8 +10,12 @@ export default function CallToAction() {
         <p className="text-gray-500 dark:text-gray-300 mb-5">
           Join me on my journey at <strong>DevJourney</strong>, where I share
           insights, tutorials, and projects from my experience as a software
-          engineer. Let's grow together!
+          engineer. Whether you're exploring new tools, diving into complex
+          concepts, or seeking inspiration for your next project, there's
+          something here for everyone. Let's learn, create, and grow together,
+          one step at a time!
         </p>
+
         <button
           type="button"
           className="rounded-tl-xl text-base rounded-bl-none px-6 py-3 mx-auto bg-gradient-to-r from-green-600 via-indigo-500 to-purple-700 hover:scale-95 text-white w-full rounded-md"
