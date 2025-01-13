@@ -86,7 +86,7 @@ const PostCard = ({ post }: { post: PostTypeCard }) => {
 
       <div className="flex-between gap-3 mt-5">
         <Link href={`/?query=${category?.toLowerCase()}`}>
-          <button className="py-2 px-3 bg-gradient-to-r from-indigo-600 via-blue-500 to-purple-600 rounded-md text-white text-sm tracking-wide block">
+          <button className="py-2 px-3 bg-gradient-to-r from-indigo-600 via-blue-500 to-purple-600 rounded-lg text-white text-sm tracking-wide block">
             {category}
           </button>
         </Link>
@@ -94,7 +94,7 @@ const PostCard = ({ post }: { post: PostTypeCard }) => {
         <Link href={`/post/${_id}`}>
           <button
             type="button"
-            className="py-2 px-3 bg-gradient-to-r from-indigo-600 via-green-500 to-pink-800 rounded-md text-white flex items-center cursor-pointer text-sm tracking-wide"
+            className="py-2 px-3 bg-gradient-to-r from-indigo-600 via-green-500 to-pink-800 rounded-lg text-white flex items-center cursor-pointer text-sm tracking-wide"
           >
             Read More
           </button>
