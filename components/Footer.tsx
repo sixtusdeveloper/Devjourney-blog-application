@@ -6,7 +6,7 @@ import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa"; // Importing t
 const Footer = () => {
   return (
     <section className="w-full bg-slate-50 border-t mx-auto">
-      <div className="max-w-5xl justify-between items-center mx-auto flex gap-8 flex-wrap p-10">
+      <div className="max-w-5xl justify-between items-center mx-auto flex gap-8 flex-wrap p-8 sm:p-10">
         <nav className="flex gap-6 flex-start">
           <ul className="footer-nav">
             <h6 className="footer-title">Help</h6>
@@ -71,7 +71,7 @@ const Footer = () => {
         </nav>
       </div>
 
-      <div className="flex justify-between items-center flex-wrap bg-slate-100 text-base-content py-3 px-10">
+      <div className="flex justify-between items-center flex-wrap bg-slate-100 text-base-content py-3 px-8 sm:px-10">
         <Link href="/">
           <div className="flex justify-start items-center gap-2 logo p-2 rounded-xl">
             <Image src="/logo.png" alt="logo" width={30} height={30} />
@@ -111,6 +111,8 @@ const Footer = () => {
           DevJourney is a platform for developers to showcase their projects,
           skills, and journey. Join us to track your progress!
         </p>
+
+        <p className="text-sm">developed by Sixtusdev | version 0.1.0</p>
 
         {/* <div className="divider"></div> */}
       </div>
