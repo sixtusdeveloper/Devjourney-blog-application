@@ -86,7 +86,7 @@ const page = async ({ params }: { params: Promise<{ id: string }> }) => {
         </div>
       </section>
 
-      <section className="mt-8 w-full">
+      <section className="px-4 mt-8 w-full">
         <div className="sace-y-2 sm:space-y-5 mt-8 max-w-6xl md:px-8 mx-auto">
           <div className="flex-between gap-5">
             <Link
