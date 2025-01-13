@@ -40,7 +40,7 @@ const page = async () => {
         </div>
       </section>
 
-      <section className="container mx-auto px-4 md:px-0">
+      <section className="container mx-auto px-2 md:px-0">
         <h2 className="text-3xl text-gray-700 font-bold text-center mt-10">
           Create a New Post
         </h2>
