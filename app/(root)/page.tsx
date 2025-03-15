@@ -45,9 +45,9 @@ export default async function Home({
         <div className="absolute inset-0 bg-black bg-opacity-60"></div>
         <div className="relative z-10 max-w-3xl text-white mx-auto space-y-2 sm:space-y-6 px-4">
           <h4 className="mt-8 inline-block bg-white/10 text-lg sm:text-xl font-semibold px-4 py-2 rounded-full shadow-md hover:shadow-lg transition-all">
-            👋 Hi, {session?.user?.name || "Hi there!"}
+            👋 Hello, {session?.user?.name || "there!"}
           </h4>
-          <h1 className="text-4xl sm:text-5xl font-bold tracking-wide">
+          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-wide py-2">
             Welcome to Devjourney Blog
           </h1>
           <p className="sub-heading !max-w-2xl mx-auto">
@@ -56,7 +56,7 @@ export default async function Home({
             ideas, and expertise with a vibrant community of innovators.
           </p>
           <Link href="/about">
-            <button className="mx-auto mt-4 px-6 py-3 bg-gradient-to-r from-indigo-600 via-green-500 to-purple-600 hover:scale-95 text-white flex items-center cursor-pointer tracking-wide text-lg font-semibold rounded-full shadow-lg transition duration-300">
+            <button className="mx-auto mt-4 px-8 py-3 bg-gradient-to-r from-indigo-600 via-green-500 to-purple-600 hover:scale-95 text-white flex items-center cursor-pointer tracking-wide text-lg font-semibold rounded-full shadow-lg transition duration-300">
               Read More
             </button>
           </Link>
