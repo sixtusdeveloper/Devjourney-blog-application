@@ -52,7 +52,8 @@ const page = async ({ params }: { params: Promise<{ id: string }> }) => {
   return (
     <>
       <section
-        className="relative md:mt-12 mt-10 md:py-8 md:px-6 min-h-screen lg:min-h-[430px] flex items-center justify-center bg-cover bg-center"
+        // className="relative pt-8 lg:px-0 px-0 md:px-4 md:py-10 flex items-center flex-wrap justify-start md:justify-center w-full min-h-[85vh] lg:min-h-[520px] bg-cover bg-center bg-no-repeat"
+        className="relative md:mt-12 mt-10 md:py-8 overflow-hidden md:px-6 min-h-[75vh] lg:min-h-[520px] flex items-center justify-center bg-cover bg-center"
         style={{ backgroundImage: `url(${post.image})` }}
       >
         {/* Overlay */}
@@ -70,16 +71,12 @@ const page = async ({ params }: { params: Promise<{ id: string }> }) => {
           </p>
 
           <h1 className="text-4xl sm:text-5xl text-center font-bold tracking-wide">
-            {truncateText(post.title, 52)}{" "}
+            {post.title}
             {/* Truncate title to 60 characters */}
           </h1>
-          <p className="text-base sm:text-lg leading-relaxed sub-heading !max-w-2xl mx-auto">
-            {truncateText(post.excerpt, 120)}{" "}
-            {/* Truncate excerpt to 120 characters */}
-          </p>
 
           <Link href="/post/create" className="text-center">
-            <button className="mt-6 px-6 py-3 mx-auto bg-gradient-to-r from-green-600 via-indigo-500 to-purple-700 hover:scale-95 text-white flex items-center cursor-pointer tracking-wide text-lg font-semibold rounded-full shadow-lg transition duration-300">
+            <button className="my-8 px-6 py-3 mx-auto bg-gradient-to-r from-green-600 via-indigo-500 to-purple-700 hover:scale-95 text-white flex items-center cursor-pointer tracking-wide text-lg font-semibold rounded-full shadow-lg transition duration-300">
               Share Your Thoughts
             </button>
           </Link>
@@ -114,6 +111,10 @@ const page = async ({ params }: { params: Promise<{ id: string }> }) => {
 
           <div>
             <h1 className="text-30-bold">Post Details</h1>
+
+            <p className="text-base text-gray-600 sm:text-lg leading-relaxed !max-w-2xl py-2">
+              {post.excerpt}
+            </p>
 
             {parsedContent ? (
               <article
